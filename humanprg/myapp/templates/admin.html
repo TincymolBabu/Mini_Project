@@ -1,0 +1,79 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{% static "media/admin2.jpeg"%}');
+             /* Adjust background image properties */
+            background-size: cover; /* Cover the entire body */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height:100vh;/
+        }
+
+        .jumbotron {
+            background-color: #3a4a6d;
+            color: white;
+        }
+
+        .container {
+            max-width: 2500px;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+        }
+        header {
+            background-color: #2e85a2ab;
+            color: #fff;
+            padding: 300px;
+            text-align: center;
+        }
+
+        nav {
+        &nbsp;&nbsp;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0px;
+        }
+        nav a {
+            color: yellow;
+            text-decoration: none;
+            padding: 10px 10px;
+            margin: 0 5px;
+            border-radius: 30px;
+            background-color: #1a2029;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+
+        <div class="container">
+
+            <hr class="my-4">
+        </div>
+</center>
+    <nav>
+        <a href="#">Home</a>
+        <a href="/unapproved_employees/">Approve Employee </a>
+         <a href="/appro/">Attendance</a>
+        <a href="/leave1/">Leave Reports</a>
+        <a href="/logout/">Logout</a>
+    </nav>
+
+</body>
+</html>

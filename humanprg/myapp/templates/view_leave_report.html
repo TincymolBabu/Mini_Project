@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>View Leave Report</h2>
+    <table>
+        <tr>
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Reason</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.leave_type }}</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+<html>
+<head>
+    <title>Update Leave Report</title>
+</head>
+<body>
+<h2>Update Leave Report</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Leave Request</title>
+<style>
+
+h2{
+ font-family: Sans-serif;
+ font-size: 24px;
+ font-style: normal;
+ font-weight: bold;
+ color: blue;
+ text-align: center;
+ text-decoration: underline
+}
+table{
+ font-family: verdana;
+ color:black
+ font-size: 16px;
+ font-style: normal;
+ font-weight: bold;
+ background: linear-gradient(to bottom, #888 0%, #888 100%);
+ border-collapse: collapse;
+ border: 2px solid #000000;
+ }
+table.inner{
+ border: 10px
+}
+input[type=text], input[type=email], input[type=number]{
+ width: 50%;
+ padding: 6px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+}
+input[type=submit]{
+ width: 15%;
+ padding: 8px 12px;
+ margin: 5px 0;
+ box-sizing: border-box;
+ background-color:#CEED;
+}
+</style>
+</head>
+<body>
+    <form method="post" action="{% url 'leave_request' %}">
+        {% csrf_token%}
+        <center>
+        <h1><b>LEAVE REQUEST</b></h1></center>
+        <table align="center" cellpadding = "10">
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="Name" id="Name" maxlength="50"  />
+                </td>
+            </tr>
+            <tr>
+            <td>Leave type</td>
+            <td>
+                <input type="text" name="leave_type" id="leave_type">
+            </td>
+            </tr>
+
+            <tr>
+                <td>Start date</td>
+                <td>
+                <input type="date" name="start_date" id="start_date">
+                </td>
+        </tr>
+         <tr>
+            <td>end date</td>
+            <td>
+                <input type="date" name="end_date" id="end_date">
+            </td>
+        </tr>
+
+
+<!------------------------- Reason ---------------------------------->
+        <tr>
+            <td>Reason<br /><br /><br /></td>
+            <td>
+                <input type="text" name="reason" id="reason"  rows="15" cols="50">
+            </td>
+        </tr>
+
+
+
+<!----------------------- Submit and Reset ------------------------------->
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" value="Submit" >Submit</button>
+
+
+            </td>
+        </tr>
+</table>
+</form>
+</body>
+</html>

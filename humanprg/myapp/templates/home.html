@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('{% static "media/home4.jpeg" %}');
+            /* Adjust background image properties */
+            background-size: cover; /* Cover the entire body */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height:100vh;/
+        }
+
+        .jumbotron {
+            background-color: blue;
+            color: white;
+        }
+
+        .container {
+            max-width: 2500px;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+        }
+        header {
+            background-color: #2e85a2ab;
+            color: #fff;
+            padding: 300px;
+            text-align: center;
+        }
+
+        nav {
+
+            display: flex;
+            justify-content: flex-end;
+            padding: 30px;
+
+
+        }
+
+        nav a {
+            color: #yyyy;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 40px;
+            background-color: #wes5;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+        <div class="container>
+            <hr class="my-4">
+        </div>
+    </div>
+</center>
+    <nav>
+        <a href="#">Home</a>
+        <a href="/logdoc/">HR</a>
+        <a href="/opt/">Employee</a>
+        <a href="/approve/">leave status</a>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Leave Requests</title>
+</head>
+<body>
+      <h1>Leave Requests</h1>
+    <ul>
+        {% for request in leave_requests %}
+        <li>{{ request.Name }} - {{ request.start_date }} to {{ request.end_date }} - {{ request.reason }}</li>
+        <form method="post" action="{% url 'approve_leave' %}">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Approve</button>
+             <button type="submit">Reject</button>
+        </form>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

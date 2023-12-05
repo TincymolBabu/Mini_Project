@@ -1,0 +1,116 @@
+
+<html>
+<head>
+    <title>Membership Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Added styles */
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-row label {
+            width: 48%;
+        }
+        .form-row input[type="text"], .form-row input[type="email"], .form-row input[type="date"] {
+            width: 48%;
+        }
+    </style>
+</head>
+<body><center>
+    <b><h1>REGISTRATION FORM</h1></b></center><br>
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="form-row">
+            <label for="employeeid">Employee ID:</label><br>
+            <input type="text" id="employeeid" name="employeeid" required><br>
+        </div>
+        <div class="form-row">
+            <label for="firstname">First Name:</label><br>
+            <input type="text" id="firstname" name="firstname" required><br>
+        </div>
+        <div class="form-row">
+            <label for="lastname">Last Name:</label><br>
+            <input type="text" id="lastname" name="lastname" required><br>
+        </div>
+        <div class="form-row"> <br>
+            <label for="gender">Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+</div>
+        <div class="form-row">
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br>
+        </div>
+        <div class="form-row">
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" required><br>
+        </div>
+        <div class="form-row">
+            <label for="mobile">Mobile Number:</label><br>
+            <input type="text" id="mobile" name="mobile" required><br>
+        </div>
+        <div class="form-row">
+            <label for="emailid">Email ID:</label><br>
+            <input type="email" id="emailid" name="emailid" required><br>
+        </div>
+        <div class="form-row">
+            <label for="department">Department:</label><br>
+            <input type="text" id="department" name="department" required><br>
+        </div>
+        <div class="form-row">
+            <label for="salary">Salary:</label><br>
+            <input type="text" id="salary" name="salary" required><br>
+        </div>
+        <div class="form-row">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+        </div><br>
+    <div class="form-row">
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+    </div><br>
+        <br>
+        <input type="submit" value="Submit">
+
+
+
+
+    </form>
+</body>
+</html>

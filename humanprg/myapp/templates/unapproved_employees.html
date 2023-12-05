@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unapproved Employees</title>
+</head>
+<body>
+    <h1>Unapproved Employees</h1>
+
+    {% if unapproved_employees %}
+        <ul>
+            {% for employee in unapproved_employees %}
+                <li>
+                    {{ employee.firstname }} {{ employee.lastname }} - Employee ID: {{ employee.id }}
+                    <form method="post" action="{% url 'approve_employee' employee.id %}">
+                        {% csrf_token %}
+                        <button type="submit">Approve</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No unapproved employees.</p>
+    {% endif %}
+</body>
+</html>

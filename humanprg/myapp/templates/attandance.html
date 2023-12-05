@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Leave Requests</title>
+</head>
+<body>
+     <h1>Unapproved Employees</h1>
+
+        <ul>
+            {% for Employeelist in approved_emplist %}
+                <li>
+                    {{ employee.Name }}  - Employee ID: {{ employee.id }}
+                    <form method="post" action="{% url 'approve_emplist' employee.id %}">
+                        {% csrf_token %}
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <p>No unapproved employees.</p>
+    {% endif %}
+</body>
+</html>

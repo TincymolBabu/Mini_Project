@@ -1,0 +1,68 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+            background-image: url('{% static "media/employee.jpeg"%}');
+             /* Adjust background image properties */
+            background-size: cover; /* Cover the entire body */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height:100vh;/
+
+    }
+
+
+    h1 {
+      text-align: center;
+    }
+
+    .menu {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+
+    }
+
+    .menu li {
+      margin-bottom: 5px;
+      background-color: red;
+    }
+
+    .menu li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: blue;
+      border-radius: 10px;
+      background-color: #e0e0e0;
+      transition: background-color 0.3s ease;
+    }
+    .menu li a:hover {
+    background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <center><h1>WELCOME</h1></center>
+    <br>
+    <br>
+    <ul class="menu">
+      <li><a href="#">View Attendance</a></li>
+      <li><a href="/leave/">Leave Rquest</a></li>
+      <li><a href="/emplogout/">Logout</a></li>
+    </ul>
+  </div>
+</body>
+</html>
